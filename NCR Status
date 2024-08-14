@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Email Notification</title>
+</head>
+<body>
+    <h1>Click a button to send an email</h1>
+
+    <button id="andreButton">Andre</button>
+    <button id="vidarButton">Vidar</button>
+    <button id="danielButton">Daniel</button>
+    <button id="ricardoButton">Ricardo</button>
+    <button id="jakubButton">Jakub</button>
+
+    <script>
+        function sendEmail(name) {
+            window.location.href = `mailto:risa@interwell.com?subject=Button%20Clicked:%20${name}&body=${name}%20button%20was%20clicked!`;
+        }
+
+        document.getElementById("andreButton").addEventListener("click", function() {
+            sendEmail('Andre');
+        });
+
+        document.getElementById("vidarButton").addEventListener("click", function() {
+            sendEmail('Vidar');
+        });
+
+        document.getElementById("danielButton").addEventListener("click", function() {
+            sendEmail('Daniel');
+        });
+
+        document.getElementById("ricardoButton").addEventListener("click", function() {
+            sendEmail('Ricardo');
+        });
+
+        document.getElementById("jakubButton").addEventListener("click", function() {
+            sendEmail('Jakub');
+        });
+    </script>
+</body>
+</html>
